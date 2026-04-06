@@ -15,3 +15,19 @@ When working under `web/app` on layout, styling, components, or visual polish:
 ## Agent cost
 
 Prefer minimal tool use and concise replies: [`.cursor/rules/frugal-agent.mdc`](../.cursor/rules/frugal-agent.mdc) and your global User Rule (or `~/.cursor/rules/credit-efficient.mdc` on disk).
+
+## Cursor Cloud specific instructions
+
+### Project overview
+EduBoost is a static marketing/landing website built with **Next.js 16.2.1** (App Router, Turbopack), React 19, Tailwind CSS 4, Framer Motion, and TypeScript. All data (courses, teachers, pricing) is hardcoded — there is no backend, database, or API.
+
+### Running the app
+The project lives in `/workspace/web`. Standard commands (`npm run dev`, `npm run build`, `npm run lint`) are in `package.json`. The dev server runs on port **3000**.
+
+### Key pages / routes
+`/` (home), `/about`, `/courses`, `/courses/[slug]`, `/teachers`, `/teachers/[slug]`.
+
+### Gotchas
+- Next.js 16.x has breaking changes vs. earlier versions. Always check `node_modules/next/dist/docs/` before using Next.js APIs.
+- Lint produces 2 pre-existing warnings (unused var in `WhyEduBoostSection.tsx`, unused eslint-disable in `TeacherDetailHero.tsx`) — these are not errors.
+- No `.env` file is needed; no external services or secrets are required.
