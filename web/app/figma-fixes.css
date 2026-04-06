@@ -1,0 +1,51 @@
+/* Figma Design System Overrides - Safe Integration */
+/* Applied: 2026-03-27 */
+
+/* Navbar Color Fix - Using CSS variables from globals.css */
+header,
+[class*="navbar"],
+nav[class*="header"] {
+  background-color: var(--color-navbar, #1a1a2e);
+}
+
+/* CTA Button Color Fix */
+button[class*="primary"],
+button[class*="cta"],
+[class*="btn-primary"] {
+  background-color: var(--color-cta, #F59E0B);
+}
+
+button[class*="primary"]:hover,
+button[class*="cta"]:hover {
+  background-color: var(--color-cta-hover, #D97706);
+}
+
+/* Typography Weight Fixes - Subtle */
+h1, h2[class*="title"] {
+  font-weight: 600;
+}
+
+h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+[class*="nav-link"],
+[class*="nav-item"] {
+  font-weight: 500;
+}
+
+/* Section Spacing - Reduced from 96px to 64px */
+section[class*="section"],
+[class*="section-padding"] {
+  padding-top: 4rem;    /* 64px */
+  padding-bottom: 4rem; /* 64px */
+}
+
+/* Respect user's existing responsive breakpoints */
+@media (min-width: 1024px) {
+  section[class*="section"],
+  [class*="section-padding"] {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}

@@ -1,0 +1,127 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# Next.js
+.next/
+out/
+
+# Testing
+coverage/
+
+# Production builds
+build/
+dist/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Database
+*.sqlite
+*.sqlite3
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS generated files
+Thumbs.db
+
+# Cache
+.cache/
+*.cache
+
+# Temporary files
+tmp/
+temp/
+
+# Screenshots and design assets (not source code)
+screenshots/
+*.png
+*.jpg
+*.jpeg
+*.gif
+!public/**/*.png
+!public/**/*.jpg
+!public/**/*.jpeg
+!public/**/*.gif
+!src/**/*.png
+!src/**/*.jpg
+!src/**/*.jpeg
+!src/**/*.gif
+
+# Videos
+*.mp4
+*.mov
+*.avi
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# Figma related files
+figma_*.json
+figma_*.txt
+fetch_figma*
+extract_tokens.mjs
+summarize_figma.mjs
+capture_figma.mjs
+run_mcp_figma.js
+
+# Debug files
+debug.log
+nul
+
+# Build info
+tsconfig.tsbuildinfo
+
+# Misc
+.impeccable.md
+CLAUDE.md
+VERIFICATION_CHECKLIST.md
+skills-lock.json
+
+# Cursor
+.cursor/
+
+# Test files
+mobile-test.js
+animation_test/
+whyedu-*.png
+whyduboost-test.png/
+marquee_*.png
+fullpage.png
+full_page.png
+featured_courses.png
+course_cards.png
+view*.png
+scroll-why.js
+next-dev*.log
+server.log
+dev-output.log
+nextjs.pid

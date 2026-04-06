@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -sL -w \"%{content_type}\\\\n\" \"https://www.figma.com/api/mcp/asset/677e16e6-716c-4a1c-9cc1-908c7216d86e\" -o \"677e16e6-716c-4a1c-9cc1-908c7216d86e.tmp\")",
+      "Bash(xxd)",
+      "Bash(mv \"677e16e6-716c-4a1c-9cc1-908c7216d86e.tmp\" \"677e16e6-716c-4a1c-9cc1-908c7216d86e.png\")",
+      "Bash(curl -sL -w \"%{content_type}\\\\n\" \"https://www.figma.com/api/mcp/asset/1cf06bc0-8d05-43e7-b12d-056e79477bfa\" -o \"1cf06bc0-8d05-43e7-b12d-056e79477bfa.tmp\")",
+      "Bash(mv \"1cf06bc0-8d05-43e7-b12d-056e79477bfa.tmp\" \"1cf06bc0-8d05-43e7-b12d-056e79477bfa.png\")",
+      "Bash(curl -sL -w \"%{content_type}\\\\n\" \"https://www.figma.com/api/mcp/asset/3833642b-12f7-4f30-81b1-6cae22e179b8\" -o \"3833642b-12f7-4f30-81b1-6cae22e179b8.tmp\")",
+      "Bash(mv \"3833642b-12f7-4f30-81b1-6cae22e179b8.tmp\" \"3833642b-12f7-4f30-81b1-6cae22e179b8.png\")",
+      "Bash(curl -sL -w \"%{content_type}\\\\n\" \"https://www.figma.com/api/mcp/asset/62248ab1-9c68-4a90-8d62-b36d8f9b9c5b\" -o \"62248ab1-9c68-4a90-8d62-b36d8f9b9c5b.tmp\")",
+      "Bash(npx tsc:*)",
+      "Bash(npm run:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/about)",
+      "Bash(taskkill /PID 28504 /F)",
+      "Bash(cmd /c \"taskkill /PID 28504 /F\")",
+      "Bash(cmd /c \"netstat -ano | findstr :3000\")",
+      "Bash(cmd /c \"netstat -ano | findstr LISTENING | findstr :3000\")",
+      "Bash(mv \"22704b8a-1990-4c29-8703-c5204c79c86f.tmp\" \"22704b8a-1990-4c29-8703-c5204c79c86f.png\")",
+      "Bash(mv \"71e8b27a-98a7-461f-9816-5a279b7794c9.tmp\" \"71e8b27a-98a7-461f-9816-5a279b7794c9.png\")",
+      "Bash(mv \"d6d61355-2b3a-4933-9006-9f053549b3c4.tmp\" \"d6d61355-2b3a-4933-9006-9f053549b3c4.png\")",
+      "Bash(taskkill /PID b1b5oms9l /F)",
+      "Bash(taskkill /PID 24056 /F)",
+      "Bash(taskkill /F /IM node.exe)",
+      "Bash(taskkill //PID 24056 //F)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill //PID 28504 //F)",
+      "Bash(find 'C:\\\\Users\\\\rohan\\\\Documents\\\\Eduboost - Fullstack\\\\web' -type f -name *[Cc]ourse*)",
+      "Bash(xargs grep:*)",
+      "Bash(node -e \"const p = require\\(''./node_modules/next/package.json''\\); console.log\\(p.version\\)\")",
+      "Bash(findstr :3000)",
+      "Bash(taskkill //PID 37124 //F)",
+      "Bash(ls \"C:\\\\Users\\\\rohan\\\\Documents\\\\Eduboost - Fullstack\\\\web\\\\public\\\\images\\\\eduboost\"\" | grep -E \"3bf4c026)",
+      "Bash(9210fee3\" 2>/dev/null || echo \"not found \")",
+      "Bash(grep -r figma.com/design 'C:\\\\Users\\\\rohan\\\\Documents\\\\Eduboost - Fullstack' --include=*.md --include=*.mdc --include=*.json --include=*.ts -l)",
+      "Bash(node -e \":*)"
+    ]
+  }
+}

@@ -1,0 +1,306 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "PP_Neue_Montreal";
+  src: url("/fonts/pp-neue-montreal/ppneuemontreal-thin.otf")
+    format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PP_Neue_Montreal";
+  src: url("/fonts/pp-neue-montreal/ppneuemontreal-book.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PP_Neue_Montreal";
+  src: url("/fonts/pp-neue-montreal/ppneuemontreal-italic.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PP_Neue_Montreal";
+  src: url("/fonts/pp-neue-montreal/ppneuemontreal-medium.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PP_Neue_Montreal";
+  src: url("/fonts/pp-neue-montreal/ppneuemontreal-bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PP_Neue_Montreal";
+  src: url("/fonts/pp-neue-montreal/ppneuemontreal-semibolditalic.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+html {
+  /* Framer Motion useScroll measures against the scroll container; static breaks offsets. */
+  position: relative;
+  scroll-padding-top: 4.25rem;
+}
+
+@media (min-width: 1024px) {
+  html {
+    scroll-padding-top: 6rem;
+  }
+}
+
+:root {
+  --background: #f1f1f1;
+  --foreground: #171717;
+  --font-pp-neue-montreal: "PP_Neue_Montreal:Book";
+  --eduboost-max: 1440px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-pp-neue-montreal);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  /* Verified Figma colors - 2026-03-28 */
+  --color-navbar: #262626;
+  --color-cta: #FF3300;
+  --color-cta-hover: #E62E00;
+  --color-accent: #FFF7F5;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  text-rendering: geometricPrecision;
+}
+
+@layer components {
+  /**
+   * Pill CTAs — flat surfaces; motion is only the label + icon rails
+   * (.pill-cta-text-track / .pill-cta-icon-track).
+   */
+
+  .pill-cta-primary {
+    @apply cursor-pointer touch-manipulation select-none outline-none;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .pill-cta-outline,
+  .pill-cta-ghost,
+  .pill-cta-surface {
+    @apply cursor-pointer touch-manipulation select-none outline-none;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .pill-cta-primary > *,
+  .pill-cta-outline > *,
+  .pill-cta-ghost > *,
+  .pill-cta-surface > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* --- Shared label + icon rails (Webflow-style clip + slide) --- */
+  /* Clip must use the same font/line-height as the label so `1lh` matches one line. */
+  .pill-cta-text-clip {
+    flex-shrink: 0;
+  }
+
+  /* Icon rail: 200% × 200% track; cells at (0,0) and (-50%, 50%) → 45° separation;
+     hover translate(50%, -50%) moves first icon out ↗, ghost in from ↙ on same axis. */
+  .pill-cta-icon-clip {
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .pill-cta-icon-cell {
+    box-sizing: border-box;
+    min-height: 0;
+    min-width: 0;
+  }
+
+  /* Text leads slightly; icon pair follows (Webflow-style sequencing). */
+  .pill-cta-text-track {
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .pill-cta-icon-track {
+    transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1) 0.06s;
+  }
+
+  .pill-cta-primary:hover .pill-cta-text-track,
+  .pill-cta-primary:focus-visible .pill-cta-text-track,
+  .pill-cta-outline:hover .pill-cta-text-track,
+  .pill-cta-outline:focus-visible .pill-cta-text-track,
+  .pill-cta-ghost:hover .pill-cta-text-track,
+  .pill-cta-ghost:focus-visible .pill-cta-text-track,
+  .pill-cta-surface:hover .pill-cta-text-track,
+  .pill-cta-surface:focus-visible .pill-cta-text-track {
+    transform: translateY(-50%);
+  }
+
+  .pill-cta-primary:hover .pill-cta-icon-track,
+  .pill-cta-primary:focus-visible .pill-cta-icon-track,
+  .pill-cta-outline:hover .pill-cta-icon-track,
+  .pill-cta-outline:focus-visible .pill-cta-icon-track,
+  .pill-cta-ghost:hover .pill-cta-icon-track,
+  .pill-cta-ghost:focus-visible .pill-cta-icon-track,
+  .pill-cta-surface:hover .pill-cta-icon-track,
+  .pill-cta-surface:focus-visible .pill-cta-icon-track {
+    transform: translate3d(50%, -50%, 0);
+  }
+
+  .pill-cta-primary:active .pill-cta-text-track,
+  .pill-cta-primary:active .pill-cta-icon-track,
+  .pill-cta-outline:active .pill-cta-text-track,
+  .pill-cta-outline:active .pill-cta-icon-track,
+  .pill-cta-ghost:active .pill-cta-text-track,
+  .pill-cta-ghost:active .pill-cta-icon-track,
+  .pill-cta-surface:active .pill-cta-text-track,
+  .pill-cta-surface:active .pill-cta-icon-track {
+    transition-duration: 0.12s;
+  }
+
+  .pill-cta-primary:focus-visible {
+    @apply ring-2 ring-[#ff6633] ring-offset-2;
+  }
+
+  .pill-cta-outline {
+    border: 1px solid #000;
+    background-color: #fff;
+    transition: background-color 0.25s ease;
+  }
+
+  .pill-cta-outline:hover {
+    background-color: #fafafa;
+  }
+
+  .pill-cta-outline:active {
+    background-color: #f3f3f3;
+  }
+
+  .pill-cta-outline:focus-visible {
+    @apply ring-2 ring-black/35 ring-offset-2;
+  }
+
+  .pill-cta-ghost {
+    @apply text-black;
+    background-color: rgb(241 241 241 / 0.92);
+    border: 1px solid rgb(0 0 0 / 0.08);
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+  }
+
+  .pill-cta-ghost:hover {
+    background-color: rgb(235 235 235 / 0.98);
+    border-color: rgb(0 0 0 / 0.12);
+  }
+
+  .pill-cta-ghost:active {
+    background-color: rgb(228 228 228 / 1);
+  }
+
+  .pill-cta-ghost:focus-visible {
+    @apply ring-2 ring-black/25 ring-offset-2;
+  }
+
+  /** White / light pill on gray cards — same rail motion, no border emphasis */
+  .pill-cta-surface {
+    @apply text-black;
+    background-color: #fff;
+    border: 1px solid rgb(0 0 0 / 0.06);
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+  }
+
+  .pill-cta-surface:hover {
+    background-color: #fafafa;
+    border-color: rgb(0 0 0 / 0.1);
+  }
+
+  .pill-cta-surface:active {
+    background-color: #f3f3f3;
+  }
+
+  .pill-cta-surface:focus-visible {
+    @apply ring-2 ring-black/25 ring-offset-2;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pill-cta-text-track,
+    .pill-cta-icon-track {
+      transition-delay: 0ms !important;
+    }
+
+    .pill-cta-primary,
+    .pill-cta-outline,
+    .pill-cta-ghost,
+    .pill-cta-surface {
+      transition-duration: 0.01ms !important;
+    }
+
+    .pill-cta-primary:hover,
+    .pill-cta-outline:hover,
+    .pill-cta-ghost:hover,
+    .pill-cta-surface:hover {
+      transform: none;
+    }
+
+    .pill-cta-primary:hover .pill-cta-text-track,
+    .pill-cta-primary:focus-visible .pill-cta-text-track,
+    .pill-cta-outline:hover .pill-cta-text-track,
+    .pill-cta-outline:focus-visible .pill-cta-text-track,
+    .pill-cta-ghost:hover .pill-cta-text-track,
+    .pill-cta-ghost:focus-visible .pill-cta-text-track,
+    .pill-cta-surface:hover .pill-cta-text-track,
+    .pill-cta-surface:focus-visible .pill-cta-text-track,
+    .pill-cta-primary:hover .pill-cta-icon-track,
+    .pill-cta-primary:focus-visible .pill-cta-icon-track,
+    .pill-cta-outline:hover .pill-cta-icon-track,
+    .pill-cta-outline:focus-visible .pill-cta-icon-track,
+    .pill-cta-ghost:hover .pill-cta-icon-track,
+    .pill-cta-ghost:focus-visible .pill-cta-icon-track,
+    .pill-cta-surface:hover .pill-cta-icon-track,
+    .pill-cta-surface:focus-visible .pill-cta-icon-track {
+      transform: none;
+    }
+
+  }
+}
+
+/* FIGMA VERIFIED COLORS - Applied 2026-03-28 */
+/* Extracted from actual Figma file */
+
+/* Navbar Background - Dark gray #262626 */
+/* NOTE: Removed overly broad header/nav selectors with !important */
+/* Use component-level styling for specific headers instead */
+
+/* CTA Buttons - Orange-red #FF3300 */
+/* NOTE: Removed overly broad CTA selectors with !important */
+/* Use component-level styling for specific CTAs instead */
+
+/* Nav Links - Weight 400-500 */
+[class*="nav-link"] {
+  font-weight: 400;
+}
+
+[class*="nav-link"]:hover {
+  font-weight: 500;
+}
+
+/* End Figma Colors */
