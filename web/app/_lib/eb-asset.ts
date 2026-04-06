@@ -66,6 +66,16 @@ const EB_EXT: Record<string, "png" | "svg" | "jpg"> = {
   "fc50c69a-ac9c-49ec-a6f6-e10f5acb718c": "svg",
   "fd003dad-abd0-490d-9b6f-f2affd45e218": "svg",
   "fd726f2b-6c68-42ec-978f-1cd5f6c50fc7": "png",
+  /* Teacher images */
+  "4742348d-32be-4225-ba51-0e9eec272f13": "png",
+  "371f773d-a4b0-485b-b884-f15e0d25450a": "png",
+  "292edf01-bcc6-49c3-ae1d-f74ba485dccc": "png",
+  "177ec810-96d2-41ee-a566-1e6ddb2312b9": "png",
+  "3b7e4fe8-22a4-40fa-ab85-d3d3587a20a7": "png",
+  "661ebb15-0407-42f2-a2a5-d2a2677e25e5": "png",
+  "978c2546-f1c7-4f09-a6bf-954c4d5d42de": "png",
+  "63f86692-5338-4658-93fc-64430440201d": "png",
+  "b270d464-ba71-44ce-af8d-44abd13f5d97": "png",
 };
 
 export function ebAsset(assetId: string): string {
