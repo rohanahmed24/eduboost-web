@@ -278,3 +278,5 @@ SOFTWARE.
 Made with ❤️ by [Rohan Ahmed](https://github.com/rohanahmed24)
 
 </div>
+#   T r i g g e r   d e p l o y m e n t  
+ 
