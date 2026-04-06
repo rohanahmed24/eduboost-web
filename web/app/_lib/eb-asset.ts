@@ -76,6 +76,14 @@ const EB_EXT: Record<string, "png" | "svg" | "jpg"> = {
   "978c2546-f1c7-4f09-a6bf-954c4d5d42de": "png",
   "63f86692-5338-4658-93fc-64430440201d": "png",
   "b270d464-ba71-44ce-af8d-44abd13f5d97": "png",
+  /* Teacher detail page images (descriptive names) */
+  "sophia-hart-card": "png",
+  "sophia-teachers-page": "png",
+  "sophia-detail": "png",
+  "liam-teachers-page": "png",
+  "liam-detail": "png",
+  "ethan-teachers-page": "png",
+  "ethan-detail": "png",
 };
 
 export function ebAsset(assetId: string): string {
