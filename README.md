@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/rohanahmed24/eduboost-web/main/web/public/logo.png" alt="Eduboost Logo" width="200" />
 
-# 🎓 Eduboost
+# Eduboost
 
 ### *Modern Online Learning Platform*
 
@@ -21,37 +21,37 @@
 
 ---
 
-## 📖 About Eduboost
+## About Eduboost
 
 **Eduboost** is a modern, cutting-edge online learning platform built with the latest web technologies. It provides an immersive educational experience with beautiful animations, responsive design, and seamless user interactions.
 
 Whether you're a student looking to expand your knowledge or an educator wanting to share your expertise, Eduboost offers a powerful platform that makes learning engaging and accessible.
 
-### ✨ Key Highlights
+### Key Highlights
 
-- 🚀 **Next.js 16** with App Router for optimal performance
-- 🎨 **Tailwind CSS 4** for modern, utility-first styling
-- ⚡ **React 19** with latest concurrent features
-- 🎬 **Framer Motion** for smooth, captivating animations
-- 📱 **Fully Responsive** design for all devices
-- ♿ **Accessible** UI following WCAG guidelines
+- Next.js 16 with App Router for optimal performance
+- Tailwind CSS 4 for modern, utility-first styling
+- React 19 with latest concurrent features
+- Framer Motion for smooth, captivating animations
+- Fully Responsive design for all devices
+- Accessible UI following WCAG guidelines
 
 ---
 
-## 🎯 Features
+## Features
 
 | Feature | Description | Status |
 |---------|-------------|--------|
-| 🏠 **Hero Section** | Animated hero with falling pill stack effects | ✅ |
-| 📚 **Course Catalog** | Browse and explore courses with detailed views | ✅ |
-| 👨‍🏫 **Teacher Profiles** | Instructor showcases with expertise areas | ✅ |
-| 💬 **Testimonials** | Student success stories and reviews | ✅ |
-| ❓ **FAQ Section** | Comprehensive frequently asked questions | ✅ |
-| 💰 **Pricing Plans** | Flexible subscription options | ✅ |
-| 🎭 **Motion Effects** | Scroll-triggered animations and reveals | ✅ |
-| 🌙 **Modern UI** | Clean, contemporary design aesthetic | ✅ |
+| Hero Section | Animated hero with falling pill stack effects | ✅ |
+| Course Catalog | Browse and explore courses with detailed views | ✅ |
+| Teacher Profiles | Instructor showcases with expertise areas | ✅ |
+| Testimonials | Student success stories and reviews | ✅ |
+| FAQ Section | Comprehensive frequently asked questions | ✅ |
+| Pricing Plans | Flexible subscription options | ✅ |
+| Motion Effects | Scroll-triggered animations and reveals | ✅ |
+| Modern UI | Clean, contemporary design aesthetic | ✅ |
 
-### 🎨 Design Features
+### Design Features
 
 - **Scroll Paint Animations** - Text color transitions on scroll
 - **Reveal Animations** - Elements fade in as you navigate
@@ -61,7 +61,7 @@ Whether you're a student looking to expand your knowledge or an educator wanting
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Core Framework
 | Technology | Version | Purpose |
@@ -89,29 +89,7 @@ Whether you're a student looking to expand your knowledge or an educator wanting
 
 ---
 
-## 📸 Screenshots
-
-<div align="center">
-
-### 🏠 Home Page
-<img src="./screenshots/home.png" alt="Home Page" width="800" />
-
-### 📚 Courses Section
-<img src="./screenshots/courses.png" alt="Courses Page" width="800" />
-
-### 👨‍🏫 Teacher Profiles
-<img src="./screenshots/teachers.png" alt="Teachers Page" width="800" />
-
-### 💰 Pricing Plans
-<img src="./screenshots/pricing.png" alt="Pricing Page" width="800" />
-
-</div>
-
-> 💡 **Note:** Place your screenshots in a `screenshots/` directory at the project root.
-
----
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -155,7 +133,7 @@ Navigate to [http://localhost:3000](http://localhost:3000) to see the applicatio
 
 ---
 
-## 📋 Usage Guide
+## Usage Guide
 
 ### Development Commands
 
@@ -200,7 +178,7 @@ eduboost-web/
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions from the community! Here's how you can help:
 
@@ -214,12 +192,12 @@ We welcome contributions from the community! Here's how you can help:
 
 ### Contribution Guidelines
 
-- ✅ Follow the existing code style
-- ✅ Write clear, descriptive commit messages
-- ✅ Add comments for complex logic
-- ✅ Ensure accessibility standards are met
-- ✅ Test your changes thoroughly
-- ✅ Update documentation if needed
+- Follow the existing code style
+- Write clear, descriptive commit messages
+- Add comments for complex logic
+- Ensure accessibility standards are met
+- Test your changes thoroughly
+- Update documentation if needed
 
 ### Code of Conduct
 
@@ -232,7 +210,7 @@ This project adheres to a code of conduct. By participating, you are expected to
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
@@ -262,21 +240,19 @@ SOFTWARE.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-- 🎨 Design inspiration from modern educational platforms
-- 🛠️ Built with [Next.js](https://nextjs.org/) and [React](https://react.dev/)
-- ✨ Animations powered by [Framer Motion](https://www.framer.com/motion/)
-- 💅 Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Design inspiration from modern educational platforms
+- Built with [Next.js](https://nextjs.org/) and [React](https://react.dev/)
+- Animations powered by [Framer Motion](https://www.framer.com/motion/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
 
 ---
 
 <div align="center">
 
-**[⬆ Back to Top](#-eduboost)**
+**[Back to Top](#eduboost)**
 
-Made with ❤️ by [Rohan Ahmed](https://github.com/rohanahmed24)
+Made with love by [Rohan Ahmed](https://github.com/rohanahmed24)
 
 </div>
-#   T r i g g e r   d e p l o y m e n t  
- 
